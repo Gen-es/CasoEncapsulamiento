@@ -16,8 +16,8 @@ public class CasoEncapsulamiento {
     public static void main(String[] args) {
          Persona p = new Persona();
 
-        p.setTipoDocumento("DNI");
-        p.setNumeroDocumento("12345678");
+        p.setTipoDocumento("carnet de extranjería");
+        p.setNumeroDocumento("123456789");
 
         p.setNombre("Luis");
         p.setApellidoPaterno("Perez");
@@ -26,7 +26,7 @@ public class CasoEncapsulamiento {
         p.setCelular("987654321");
         p.setCorreo("luis@gmail.com");
 
-        p.setEdad(20);
+        p.setEdad(100);
 
         p.mostrarDatos();
         // TODO code application logic here

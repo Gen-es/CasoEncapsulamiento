@@ -18,6 +18,7 @@ public class Persona {
     private String celular;
     private String correo;
     private int edad;
+    private String Categoria;
 
     // SETTERS con validaciones
 
@@ -34,7 +35,6 @@ public class Persona {
             System.out.println("Primero debe definir el tipo de documento");
             return;
         }
-
         if (tipoDocumento.equals("DNI") && numeroDocumento.length() == 8) {
             this.numeroDocumento = numeroDocumento;
         } else if (tipoDocumento.equals("carnet de extranjería") && numeroDocumento.length() == 9) {
@@ -45,10 +45,15 @@ public class Persona {
     }
 
     public void setEdad(int edad) {
-        if (edad >= 0 && edad <= 100) {
-            this.edad = edad;
-        } else {
-            System.out.println("Edad inválida");
+        this.edad = edad;
+        if(edad >= 0 && edad <=10 ){
+        this.Categoria = "Niño";
+        }else if (edad >=11 && edad <=17){
+        this.Categoria = "Adolecente";
+        }else if (edad >=18 && edad <=100){
+        this.Categoria = "Adolecente";
+        }else{
+        this.Categoria = "Edad Invalida";
         }
     }
 
@@ -74,6 +79,14 @@ public class Persona {
         this.correo = correo;
     }
 
+    public String getCategoria() {
+        return Categoria;
+    }
+
+    public void setCategoria(String Categoria) {
+        this.Categoria = Categoria;
+    }
+    
     // MÉTODO PARA MOSTRAR DATOS
 
     public void mostrarDatos() {
@@ -82,19 +95,6 @@ public class Persona {
         System.out.println("Celular: " + celular);
         System.out.println("Correo: " + correo);
         System.out.println("Edad: " + edad);
-        System.out.println("Categoría: " + obtenerCategoria());
-    }
-
-    // MÉTODO PARA CATEGORIZAR
-
-    public String obtenerCategoria() {
-        if (edad >= 0 && edad <= 10) {
-            return "Niño";
-        } else if (edad <= 17) {
-            return "Adolescente";
-        } else {
-            return "Adulto";
-        }
-    }
-    
+        System.out.println("Categoría: " + Categoria);
+    }   
 }
