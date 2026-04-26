@@ -45,15 +45,17 @@ public class Persona {
     }
 
     public void setEdad(int edad) {
+      if (edad >= 0 && edad <= 100) {
         this.edad = edad;
         if(edad >= 0 && edad <=10 ){
         this.Categoria = "Niño";
         }else if (edad >=11 && edad <=17){
-        this.Categoria = "Adolecente";
-        }else if (edad >=18 && edad <=100){
-        this.Categoria = "Adolecente";
-        }else{
-        this.Categoria = "Edad Invalida";
+        this.Categoria = "Adolescente";
+        }else {
+        this.Categoria = "Adulto";
+        }
+        } else {
+        this.Categoria = "Edad inválida";
         }
     }
 
