@@ -100,3 +100,4 @@ public class Persona {
         System.out.println("Categoría: " + Categoria);
     }   
 }
+// cambio en rama desarrollo
