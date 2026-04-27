@@ -9,7 +9,7 @@ package casoencapsulamiento;
  * @author G
  */
 public class Persona {
-    String conflicto = "DESARROLLOO";
+String conflicto = "RESUELTO";
     private String tipoDocumento;
     private String numeroDocumento;
     private String apellidoPaterno;
