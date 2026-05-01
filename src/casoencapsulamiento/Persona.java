@@ -19,6 +19,7 @@ String conflicto = "RESUELTO";
     private String correo;
     private int edad;
     private String Categoria;
+    
 
     // SETTERS con validaciones
 
